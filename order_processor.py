@@ -100,6 +100,9 @@ class OrderProcessor:
             sheet['K1'].fill = PatternFill(fill_type='solid', fgColor=Color('CAE3EB'))
             sheet['L1'].fill = PatternFill(fill_type='solid', fgColor=Color('D5D5E1'))
 
+            last_row = sheet.max_row
+            sheet[f"A{last_row}"].fill = PatternFill(fill_type='solid', fgColor=Color('D5D5D5'))
+
 
 
 

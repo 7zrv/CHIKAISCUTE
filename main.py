@@ -1,6 +1,6 @@
 import os
 
-from PyQt5.QtGui import QIcon, QPixmap, QFont
+from PyQt5.QtGui import QPixmap, QFont
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QLineEdit, QLabel, QPushButton, QMessageBox, QFileDialog
 from order_processor import OrderProcessor
@@ -10,9 +10,9 @@ class MyApp(QWidget):
 
     def __init__(self):
         super().__init__()
-        self.initUI()
+        self.init_ui()
 
-    def initUI(self):
+    def init_ui(self):
         self.setWindowTitle('For Chika Note')
 
         self.resize(700, 500)
@@ -78,7 +78,7 @@ class MyApp(QWidget):
         self.excel_file.setReadOnly(True)
 
         file_button = QPushButton('파일 선택', self)
-        file_button.clicked.connect(self.showDialog)
+        file_button.clicked.connect(self.show_dialog)
         file_button.setGeometry(500, 250, 100, 30)
         file_button.setStyleSheet(file_button_style)
         file_button.setFont(font)
@@ -94,7 +94,7 @@ class MyApp(QWidget):
         self.file_path.setReadOnly(True)
 
         file_button = QPushButton('경로 선택', self)
-        file_button.clicked.connect(self.showDialogRoute)
+        file_button.clicked.connect(self.show_dialog_route)
         file_button.setGeometry(500, 300, 100, 30)
         file_button.setStyleSheet(file_button_style)
         file_button.setFont(font)
@@ -108,13 +108,13 @@ class MyApp(QWidget):
 
         self.show()
 
-    def showDialog(self):
+    def show_dialog(self):
         fname = QFileDialog.getOpenFileName(self, '파일 선택', '', '엑셀 파일 (*.xlsx);;모든 파일 (*)')
 
         if fname[0]:  # 사용자가 파일을 선택한 경우
             self.excel_file.setText(fname[0])
 
-    def showDialogRoute(self):
+    def show_dialog_route(self):
         dirname = QFileDialog.getExistingDirectory(self, 'Open Directory', '/home')
 
         if dirname:

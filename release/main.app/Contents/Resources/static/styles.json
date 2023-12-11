@@ -1,0 +1,28 @@
+{
+  "file_button": {
+    "normal": {
+      "background-color": "#4CAF50",
+      "color": "white",
+      "border": "none",
+      "border-radius": "5px"
+    },
+    "hover": {
+      "background-color": "#45a049"
+    }
+  },
+  "run_button": {
+    "normal": {
+      "background-color": "#4CAF50",
+      "color": "white",
+      "border": "none",
+      "border-radius": "15px"
+    },
+    "hover": {
+      "background-color": "#45a049"
+    }
+  },
+  "font": {
+    "size": 12,
+    "bold": true
+  }
+}
